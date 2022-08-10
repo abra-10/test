@@ -484,7 +484,6 @@ namespace Test.Vistas.Ventas
                     var resultDet = command.ExecuteNonQuery();
                     if (resultDet <= 0)
                         throw new Exception("No se ha eliminado los detalles");
-
                     command.CommandText = $"DELETE FROM SYSTEM.VENTAS_CAB WHERE IDVENTA_CAB = {idCab}";
                     var resultCab = command.ExecuteNonQuery();
                     if (resultCab <= 0)
